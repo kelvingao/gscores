@@ -182,7 +182,8 @@ function gscores_scripts() {
 	// Enqueue Google Fonts: Source Sans Pro and PT Serif
 	wp_enqueue_style( 'gscores-fonts', gscores_fonts_url() );
 	
-	wp_enqueue_style( 'gscores-style', get_stylesheet_uri() );
+	$rand = rand(1, 9999999);
+	wp_enqueue_style( 'gscores-style', get_stylesheet_uri(), '', $rand );
 
 	wp_enqueue_script( 'gscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
